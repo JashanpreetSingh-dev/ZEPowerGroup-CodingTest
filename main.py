@@ -1,6 +1,25 @@
 import random
 from datetime import datetime
 
+"""
+The Payment class is responsible for handling payments in cash. 
+It has a constructor that takes in the payment amount and initializes attributes such as payment number, 
+transaction time, change, and validity of payment. 
+It has methods for retrieving payment amount, payment number, transaction time, and payment validity. 
+It also has a pay() method that takes in the amount paid and calculates the change, if any. 
+If the amount paid is less than the payment amount, the payment is deemed incomplete, and the order is canceled. 
+If the payment is successful, it sets the payment's validity to true.
+
+The OrderNumberGenerator class generates a random order number for each payment.
+
+The MockPaymentStore class stores all the payment objects and provides methods for registering new payments and 
+displaying all payments made.
+
+In the main function, a MockPaymentStore object is initialized. 
+Two Payment objects are then created and paid for using the pay() method. 
+Each payment object is then registered in the payment store using the register_payment() method. 
+Finally, all the payments are displayed using the show_all_payments() method of the payment store.
+"""
 
 class Payment:
     """
